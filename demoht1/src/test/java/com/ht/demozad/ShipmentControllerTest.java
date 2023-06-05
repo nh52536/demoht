@@ -78,5 +78,15 @@ public class ShipmentControllerTest extends com.ht.demozad.Test {
     }
 
 
+    @Test
+    public void getShipmentById() throws Exception {
+        String uri = "http://localhost:5432/getShipmentById/1";
+        MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)
+                .accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
+
+        int status = mvcResult.getResponse().getStatus();
+        assertEquals(200, status);
+
+    }
 
 }
