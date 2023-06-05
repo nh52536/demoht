@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "3706bb84-8670-4357-ad1c-19c8876275f7",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18331262"
+	},
+	"item": [
+		{
+			"name": "Get all shipments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5432/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5432/getAllShipmentsByDate/2023-06-05/2019-06-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"getAllShipmentsByDate",
+						"2023-06-05",
+						"2019-06-05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5432/getAllShipmentsByStatus/initialized",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"getAllShipmentsByStatus",
+						"initialized"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get shipment by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5432/getShipmentById/string",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"getShipmentById",
+						"string"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new shipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"href\":\"string\",\r\n    \"carrier\":\"string\",\r\n    \"trackingcode\":\"string\",\r\n    \"carriertrackingurl\":\"string\",\r\n    \"trackingdate\":\"2023-06-05T10:59:47.197Z\",\r\n    \"status\":\"initialized\",\r\n    \"statuschangedate\":\"2023-06-05T10:59:47.197Z\",\r\n    \"statuschangereason\":\"string\",\r\n    \"weight\":0,\r\n    \"estimateddeliverydate\":\"2023-06-05T10:59:47.197Z\",\r\n    \"createdate\":\"2023-06-05T10:59:47.197Z\"\r\n    \r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/addSHipment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"addSHipment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
